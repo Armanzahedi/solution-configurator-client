@@ -1,46 +1,23 @@
 <script setup lang="ts" generic="T extends any, O extends any">
-defineOptions({
-  name: 'IndexPage',
+const router = useRouter();
+const route = useRoute();
+const layout = useLayout();
+onMounted(() => {
+  layout.toggleLoading(true);
+  setTimeout(() => {
+    const organizationid = route.query["orgid"] as string;
+  if (organizationid == null) {
+    //@ts-ignore
+    document.getElementById('no_orgnization_alert').showModal();
+    layout.toggleLoading(false);
+  } else {
+    localStorage.setItem("orgid", organizationid);
+    router.push("/smsys-setting")
+    layout.toggleLoading(false);
+  }
+  }, 3000);
+
 })
-
-const name = ref('')
-
-const router = useRouter()
-function go() {
-  if (name.value)
-    router.push(`/hi/${encodeURIComponent(name.value)}`)
-}
 </script>
 
-<template>
-  <div>
-    <div i-carbon-campsite inline-block text-4xl />
-    <p>
-      <a rel="noreferrer" href="https://github.com/antfu/vitesse-lite" target="_blank">
-        Vitesse Lite
-      </a>
-    </p>
-    <p>
-      <em text-sm op75>Opinionated Vite Starter Template</em>
-    </p>
-
-    <div py-4 />
-
-    <TheInput
-      v-model="name"
-      placeholder="What's your name?"
-      autocomplete="false"
-      @keydown.enter="go"
-    />
-
-    <div>
-      <button
-        class="m-3 text-sm btn"
-        :disabled="!name"
-        @click="go"
-      >
-        Go
-      </button>
-    </div>
-  </div>
-</template>
+<template></template>

@@ -1,6 +1,18 @@
+
+<script setup lang="ts">
+
+</script>
+
 <template>
-  <main font-sans p="x-4 y-10" text="center gray-700 dark:gray-200">
-    <RouterView />
-    <TheFooter />
+  <main class="h-[100vh]">
+    <NoOrganizationAlert />
+    <Loading />
+    <div class="w-[100%] h-[100%]">
+    <TheSidebar>
+      <div class="pt-20 main-content">
+        <RouterView />
+      </div>
+    </TheSidebar>
+    </div>
   </main>
 </template>
