@@ -1,6 +1,7 @@
 
 <script setup lang="ts">
-const layout = useLayout()
+const uiStore= useUIStore();
+const {isLoading} = uiStore;
 
 interface SidebarItem {
   name: string,
@@ -39,7 +40,7 @@ const sidebarItems: Array<SidebarItem> = [
 
         <div class="flex flex-col justify-between flex-1">
           <nav class="-mx-3">
-            <div v-if="layout.isLoading == false">
+            <div v-if="isLoading == false">
               <SidebarItem v-for="(item, index) in sidebarItems" :key="index" :name="item.name" :link="item.link"
                 :icon-src="item.iconSrc" />
             </div>

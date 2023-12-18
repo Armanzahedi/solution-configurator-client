@@ -46,6 +46,11 @@ body {
 .drawer-content{
   margin-right: 256px;
 }
+
+.select {
+  padding-left: 2.5rem;
+  padding-right: 1rem;
+}
 @media (max-width: 1023px) {
   .sidebar {
       visibility:hidden;

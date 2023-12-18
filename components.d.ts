@@ -14,7 +14,9 @@ declare module 'vue' {
     NoOrganizationAlert: typeof import('./src/components/App/NoOrganizationAlert.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    SelectInput: typeof import('./src/components/App/Form/SelectInput.vue')['default']
     SidebarItem: typeof import('./src/components/App/Sidebar/SidebarItem.vue')['default']
+    TextInput: typeof import('./src/components/App/Form/TextInput.vue')['default']
     TheSidebar: typeof import('./src/components/App/Sidebar/TheSidebar.vue')['default']
   }
 }
