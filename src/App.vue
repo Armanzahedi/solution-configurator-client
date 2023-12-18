@@ -4,8 +4,8 @@
 </script>
 
 <template>
-  <main class="h-[100vh]">
-    <NoOrganizationAlert />
+  <main class="h-[98vh]">
+    <Modal />
     <Loading />
     <div class="w-[100%] h-[100%]">
     <TheSidebar>

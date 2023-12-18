@@ -10,12 +10,12 @@
     "preview": "vite preview",
     "test": "vitest",
     "up": "taze major -I",
-    "postinstall": "npx simple-git-hooks",
     "tailwindcss": "^3.3.6"
   },
   "dependencies": {
     "@heroicons/vue": "^2.0.18",
     "@vueuse/core": "^10.7.0",
+    "pinia": "^2.1.7",
     "vue": "^3.3.10",
     "vue-router": "^4.2.5"
   },

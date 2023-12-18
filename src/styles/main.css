@@ -29,7 +29,7 @@ body {
 
 .main-content{
   margin-left:1rem;
-  margin-right:3rem;
+  margin-right:1rem;
 }
 .custom-loading {
   left:44.5%;
@@ -40,12 +40,18 @@ body {
 .tab-active{
   color:white !important;
 }
+.drawer-side {
+  position: fixed !important;
+}
+.drawer-content{
+  margin-right: 256px;
+}
 @media (max-width: 1023px) {
   .sidebar {
       visibility:hidden;
   }
-  .main-content{
-    margin-right: 30px;
+  .drawer-content{
+    margin-right: 0;
   }
   .custom-loading {
     left:52%;

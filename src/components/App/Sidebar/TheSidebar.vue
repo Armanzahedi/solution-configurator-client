@@ -39,7 +39,7 @@ const sidebarItems: Array<SidebarItem> = [
 
         <div class="flex flex-col justify-between flex-1">
           <nav class="-mx-3">
-            <div v-if="layout.isLoading.value == false">
+            <div v-if="layout.isLoading == false">
               <SidebarItem v-for="(item, index) in sidebarItems" :key="index" :name="item.name" :link="item.link"
                 :icon-src="item.iconSrc" />
             </div>

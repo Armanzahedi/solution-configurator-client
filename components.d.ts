@@ -7,15 +7,14 @@ export {}
 
 declare module 'vue' {
   export interface GlobalComponents {
-    Layout: typeof import('./src/components/Layout.vue')['default']
-    Loading: typeof import('./src/components/Loading.vue')['default']
-    NoOrganizationAlert: typeof import('./src/components/NoOrganizationAlert.vue')['default']
+    CreateSmsProvider: typeof import('./src/components/SmSys/Sections/ManageSmsProviders/CreateSmsProvider.vue')['default']
+    Loading: typeof import('./src/components/App/Loading.vue')['default']
+    ManageSmsProviders: typeof import('./src/components/SmSys/Sections/ManageSmsProviders/ManageSmsProviders.vue')['default']
+    Modal: typeof import('./src/components/App/Modal.vue')['default']
+    NoOrganizationAlert: typeof import('./src/components/App/NoOrganizationAlert.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
-    SidebarItem: typeof import('./src/components/Sidebar/SidebarItem.vue')['default']
-    TheCounter: typeof import('./src/components/TheCounter.vue')['default']
-    TheFooter: typeof import('./src/components/TheFooter.vue')['default']
-    TheInput: typeof import('./src/components/TheInput.vue')['default']
-    TheSidebar: typeof import('./src/components/Sidebar/TheSidebar.vue')['default']
+    SidebarItem: typeof import('./src/components/App/Sidebar/SidebarItem.vue')['default']
+    TheSidebar: typeof import('./src/components/App/Sidebar/TheSidebar.vue')['default']
   }
 }
